@@ -1,5 +1,7 @@
 body {
   background-image: url('../img/bg.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .dice1 {
@@ -25,4 +27,21 @@ body {
   margin-top: 115px;
 }
 
+.form-control {
+  color: #2fbaf9;
+}
+
+label {
+  color: #d6ff4f;
+}
+
+.pig-img {
+  float: right;
+  border-radius: 30px;
+  height: 200px;
+}
+
+.pig-img h1 {
+  color: #d6ff4f;
+  font-size: 55px;
 }
