@@ -1,0 +1,19 @@
+body {
+  background-image: url('../img/bg.jpg');
+}
+
+.dice1 {
+  width: 40px;
+  height: 40px;
+  background-color: brown;
+  padding: 10px;
+  margin: 6px;
+}
+
+.dice2 {
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  padding: 10px;
+  margin: 6px;
+}
