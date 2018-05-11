@@ -1,5 +1,6 @@
 <!DOCTYPE
 <html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 <script src="js/jquery-3.3.1.js"></script>
@@ -9,34 +10,50 @@
 </head>
 
 <body>
+  <button onclick="toggle()">Rules X</button>
 
-  <!-- <div id="new-game">
-    <div class="">
-      <div class="form-group">
-        <label for="player-1">Player 1</label>
-        <input type="text" class="form-control player-1">
-      </div>
-      <div class="form-group">
-        <label for="player-2">Player-2</label>
-        <input type="text" class="form-control player-2">
-      </div>
-      <div class="form-group">
-        <label for="number of dice">No. of Dice</label>
-        <input type="text" class="form-control number-of-dice">
-      </div>
-
-      <div class="play">
-        <button type="button" onclick="startGame()" name="button">Start Game</button>
+  <div class="container-fluid">
+    <div class="menutop" id="rules">
+      <!-- <a href="javascript:void(0)" onclick="close()" id="closingBtn">&times;</a> -->
+      <div class="menutop-content">
+        <div class="rule">
+          <h4>Rules/ How To Play</h4>
+          <p>* Enter the names of the players and submit.</p>
+          <p>* Roll the dice as many times as you want to but do so at your own risk. If you roll a 1,then no points are accumulated in that particular round and your turn is over</p>
+          <p>* If you hold before rolling a 1,the points accumulated within that round are tallied and added to your score.</p>
+          <p>* Reach the target selected before your opponent and be declared the winner.</p>
+        </div>
       </div>
     </div>
+
+    <div id="new-game">
+      <div class="">
+        <div class="form-group">
+          <label for="player-1">Player 1</label>
+          <input type="text" class="form-control player-1">
+        </div>
+        <div class="form-group">
+          <label for="player-2">Player-2</label>
+          <input type="text" class="form-control player-2">
+        </div>
+        <div class="form-group">
+          <label for="number of dice">No. of Dice</label>
+          <input type="text" class="form-control number-of-dice">
+        </div>
+
+        <div class="play">
+          <button type="button" onclick="startGame()" name="button">Start Game</button>
+        </div>
+      </div>
+    </div>
+    <div class="pig-img">
+      <img src="img/pig.jpg" alt="Image of a cartoon pig">
+      <h1>Pig Dice Game</h1>
+    </div>
   </div>
-  <div class="pig-img">
-    <img src="img/pig.jpg" alt="Image of a cartoon pig">
-    <h1>Pig Dice Game</h1>
-  </div> -->
 
   <!-- //dice roll section -->
-  <div class="container">
+  <!-- <div class="container">
     <div class="row">
       <div class="col-md-3" id="left">
 
@@ -60,7 +77,8 @@
         <button class="hold" onclick="holdDice()" type="button" name="button">Hold</button>
       </div>
     </div>
-  </div>
+  </div> -->
+
 
 </body>
 

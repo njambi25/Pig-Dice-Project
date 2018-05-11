@@ -35,15 +35,19 @@ label {
   color: #d6ff4f;
 }
 
-.pig-img {
+/* //title img */
+
+img {
   float: right;
-  border-radius: 30px;
+  border-radius: 30%;
   height: 200px;
+  float: right;
 }
 
 .pig-img h1 {
   color: #d6ff4f;
   font-size: 55px;
+  float: right;
 }
 
 .row {
@@ -71,7 +75,7 @@ label {
   margin-left: 0;
 }
 
-#d1 {}
+/* //roll btn */
 
 #d2 {
   margin-left: 46%;
@@ -85,4 +89,14 @@ label {
 .roll {
   width: 70px;
   height: 30px;
+}
+
+/* //rules */
+
+.rule {
+  color: #d6ff4f;
+}
+
+.rule h4 {
+  color: #2fbaf9;
 }
