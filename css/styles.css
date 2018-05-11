@@ -45,3 +45,44 @@ label {
   color: #d6ff4f;
   font-size: 55px;
 }
+
+.row {
+  margin-left: 0;
+  margin-top: 10%;
+}
+
+#right {
+  background-color: #2fbaf9;
+  height: 330px;
+  width: 470px;
+  margin-left: 0;
+}
+
+#left {
+  background-color: #d6ff4f;
+  height: 330px;
+  width: 470px;
+  margin-left: 0;
+}
+
+.dice1 {
+  width: 200px;
+  height: 200px;
+  margin-left: 0;
+}
+
+#d1 {}
+
+#d2 {
+  margin-left: 46%;
+}
+
+.dice2 {
+  width: 200px;
+  height: 200px;
+}
+
+.roll {
+  width: 70px;
+  height: 30px;
+}
