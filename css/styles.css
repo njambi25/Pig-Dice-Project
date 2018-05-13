@@ -1,3 +1,29 @@
+body {
+  background-image: url('../img/bg.jpg');
+}
+
+label {
+  color: #2fbaf9;
+}
+
+h1 {
+  float: right;
+  color: #d6ff4f;
+}
+
+#player-names-container {
+  margin-top: 10%;
+}
+
 #game-container {
-  /* display: none; */
+  color: #2fbaf9;
+  margin-top: 10%;
+}
+
+#left {
+  background-color: #2fbaf9;
+}
+
+#right {
+  background-color: #d6ff4f;
 }

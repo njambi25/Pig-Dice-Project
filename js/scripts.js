@@ -32,6 +32,7 @@ var game = {
       this.turnScore += diceValue;
     }
   },
+
 };
 
 $(document).ready(function() {
