@@ -1,3 +1,17 @@
+var game = {
+  //players property
+  player1Name: null,
+  player2Name: null,
+
+  //set player names
+  setPlayer1Name: function(name) {
+    this.player1Name = name;
+  };
+  setPlayer2Name: function(name) {
+    this.player2Name = name;
+  };
+
+}
 $(document).ready(function() {
 
   $("#start-game-button").click(function() {
@@ -8,6 +22,10 @@ $(document).ready(function() {
     //user game object
     game.setPlayer1Name(name1);
     game.setPlayer2Name(name2);
+
+    $("span#gameStartPlayer1Name").html(name1);
+    $("span#gameStartPlayer2Name").html(name2);
+
 
   });
 });
