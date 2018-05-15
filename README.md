@@ -6,8 +6,13 @@
 The game application is a two player game where the players enter their names first and then start the game. 
 The game is about rolling a die where the first player clicks a roll dice button and a random number between one and six is generated,
 the more you click the more numbers are added up to your turn score. if you roll a one, the game goes to the second player and you don't
-get any points. The hold button adds up your turn score and they get displayed as total score. The first one to get a hundred points
-wins the game.
+get any points. The hold button adds up your turn score and they get displayed as total score. The first one to get a hundred points wins the game.
+
+#Specifications
+If the player rolls a 1, they score nothing and it becomes the next player's turn.
+If the player rolls any other number, it is added to their turn score and the player's turn continues.
+If a player chooses to "hold", their turn total is added to their total score, and it becomes the next player's turn.
+The first player to score 100 or more points wins.
 
 informarmation.
 ## Setup/Installation Requirements
