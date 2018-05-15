@@ -10,6 +10,22 @@
 </head>
 
 <body>
+  <div class="container-fluid">
+    <div class="menutop" id="rules">
+      <div class="menutop-content">
+        <button id="button" name="button">Rules</button>
+        <div class="rule">
+          <h4>Rules/ How To Play</h4>
+          <p>* Enter the names of the players and submit.</p>
+          <p>* Roll the dice as many times as you want to but do so at your own risk. If you roll a 1,then no points are accumulated in that particular round and your turn is over</p>
+          <p>* If you hold before rolling a 1,the points accumulated within that round are tallied and added to your score.</p>
+          <p>* Reach 100 points before your opponent and be declared the winner.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <h1>Pig Dice Game</h1>
   <div class="container" id="player-names-container">
     <form id="player-info">
@@ -33,15 +49,23 @@
     <div class="row">
       <div class="col-sm-5" id="left">
         <h3> player-1 <span id="gameStartPlayer1Name"></span></h3>
+        <div id="play1">
+          <p>It's player <span id="stats-turn"></span> turn </p>
+          <p>Turn Score: <span id="stats-turn-score"></span></p>
+        </div>
       </div>
       <div class="col-sm-5" id="right">
         <h3> player-2 <span id="gameStartPlayer2Name"></span></h3>
+        <div id="play2">
+          <p>It's player <span id="stats-turn2"></span> turn </p>
+          <p>Turn Score: <span id="stats-turn-score2"></span></p>
+        </div>
       </div>
     </div>
 
     <!-- //dice and turn -->
-    <p>It's player <span id="stats-turn"></span> turn </p>
-    <p>Turn Score: <span id="stats-turn-score"></span></p>
+    <!-- <p>It's player <span id="stats-turn"></span> turn </p>
+    <p>Turn Score: <span id="stats-turn-score"></span></p> -->
   </div>
 
   <button id="roll-dice-button" type="button" name="button">Roll Dice</button>

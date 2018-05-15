@@ -5,6 +5,7 @@ var game = {
 
   turn: 1,
   turnScore: 0,
+
   //set player names
   setPlayer1Name: function(name) {
     this.player1Name = name;
@@ -17,8 +18,14 @@ var game = {
   changeTurns: function() {
     if (this.turn == 1) {
       this.turn = 2;
+      $("#play1").hide();
+      $("#play2").show();
+
     } else if (this.turn == 2) {
       this.turn = 1;
+      $("#play1").show();
+      $("#play2").hide();
+
     }
     this.turnScore = 0;
   },
@@ -65,7 +72,17 @@ var game = {
   }
 };
 
+function toggle() {
+  var rules = document.getElementById("rules");
+  if (display === "none") {
+    display = "block";
+  } else {
+    display = "none";
+  }
+}
+
 $(document).ready(function() {
+
   $("#start-game-button").click(function() {
     $("#player-names-container").hide();
     var name1 = $("input#player1Name").val();
@@ -77,26 +94,36 @@ $(document).ready(function() {
     $("span#gameStartPlayer1Name").html(name1);
     $("span#gameStartPlayer2Name").html(name2);
 
-    $("game-container").show();
+    $("#game-container").show();
 
     //rolldice
 
     $("#roll-dice-button").click(function() {
       game.rollDice();
+
+      var showStats = game.showStats();
+      $("#game-stats-container").html(game.showStats());
+      $("#stats-turn").html(game.turn);
+      $("#stats-turn-score").html(game.turnScore);
+      $("#stats-turn2").html(game.turn);
+      $("#stats-turn-score2").html(game.turnScore);
+      $("stats-player-1-total-score").html(game.player1TotalScore);
+      $("#stats-player-2-total-score").html(game.player2player2TotalScore);
+
     });
-  });
 
-  $("#game-stats-container").html(game.showStats());
+    // $("#game-stats-container").html(game.showStats());
+    //
+    // var refreshStats = function() {
+    //   $("#game-stats-container").html(game.showStats());
+    //   $("#stats-turn").html(game.turn);
+    //   $("#stats-turn-score").html(game.turnScore);
+    //   $("stats-player-1-total-score").html(game.player1TotalScore);
+    //   $("#stats-player-2-total-score").html(game.player2player2TotalScore);
+    // };
 
-  var refreshStats = function() {
-    $("#game-stats-container").html(game.showStats());
-    $("#stats-turn").html(game.turn);
-    $("#stats-turn-score").html(game.turnScore);
-    $("stats-player-1-total-score").html(game.player1TotalScore);
-    $("#stats-player-2-total-score").html(game.player2player2TotalScore);
-  };
-
-  $("show-stats").click(function() {
-    refreshStats(); //replace content of game-stats-container
+    $("show-stats").click(function() {
+      refreshStats(); //replace content of game-stats-container
+    });
   });
 });
