@@ -16,14 +16,16 @@ h1 {
 }
 
 #game-container {
-  color: #2fbaf9;
+  /* color: #2fbaf9; */
   margin-top: 10%;
 }
 
 #left {
   background-color: #2fbaf9;
+  height: 400px;
 }
 
 #right {
   background-color: #d6ff4f;
+  height: 400px;
 }
