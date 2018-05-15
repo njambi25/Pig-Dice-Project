@@ -1,6 +1,6 @@
 # Pig-Dice-Project
-# Ping Dice Game Web application
-#### This is a Ping Dice Game web application, 
+# Pig Dice Game Web application
+#### This is a Pig Dice Game web application, 
 #### By **Alice Njambi**
 ## Description
 The game application is a two player game where the players enter their names first and then start the game. 
