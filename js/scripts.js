@@ -9,9 +9,7 @@ function gameplayer() {
 
 
 
-
-
-
+//UI logic
 $(document).ready(function() {
   $("#button").click(function() {
     $(".rule").toggle()
@@ -54,6 +52,31 @@ $(document).ready(function() {
     $("#stats-turn-score1").text(player1Stats.turnScore);
     $("#play1").hide()
     $("#play2").show()
+
+  });
+  //player2 roll
+  $("#roll-dice-button2").click(function() {
+    var rolled = player2Stats.roll();
+    player2Stats.turnScore += rolled;
+    if (rolled == 1) {
+      player2Stats.turnScore = 0;
+      $("#stats-turn-score2").text(player2Stats.turnScore);
+      $("#play2").hide()
+      $("#play1").show()
+
+    }
+
+    $("#stats-turn-score2").text(player2Stats.turnScore);
+
+  });
+  $("#hold-button2").click(function() {
+    player2Stats.totalScore += player2Stats.turnScore;
+    player2Stats.turnScore = 0;
+    $("#stats-player-2-total-score").text(player2Stats.totalScore);
+    $("#stats-turn-score2").text(player2Stats.turnScore);
+    $("#play2").hide()
+    $("#play1").show()
+
 
   });
 
