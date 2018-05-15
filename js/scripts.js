@@ -2,8 +2,9 @@
 function gameplayer() {
   this.turnScore = 0;
   this.totalScore = 0;
+  this.winningScore = 100;
   this.roll = function() {
-    return Math.floor(Math.random() * 6);
+    return Math.floor(Math.random() * 6) + 1;
   }
 }
 
@@ -14,6 +15,7 @@ $(document).ready(function() {
   $("#button").click(function() {
     $(".rule").toggle()
   });
+  $("#game-container").hide();
 
   $("#start-game-button").click(function(event) {
     event.preventDefault();
@@ -21,6 +23,10 @@ $(document).ready(function() {
     player1 = $("#player1Name").val();
     player2 = $("#player2Name").val();
     $("#playerinfo").hide();
+    $("#game-container").show();
+    $(".rule").hide()
+
+
     // display input
     $("#gameStartPlayer1Name").text(player1);
     $("#gameStartPlayer2Name").text(player2);
@@ -76,8 +82,7 @@ $(document).ready(function() {
     $("#stats-turn-score2").text(player2Stats.turnScore);
     $("#play2").hide()
     $("#play1").show()
-
-
   });
+
 
 });
