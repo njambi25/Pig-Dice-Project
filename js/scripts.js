@@ -1,8 +1,9 @@
 //business logic
+winningScore = 100;
+
 function gameplayer() {
   this.turnScore = 0;
   this.totalScore = 0;
-  this.winningScore = 100;
   this.roll = function() {
     return Math.floor(Math.random() * 6) + 1;
   }
@@ -40,6 +41,7 @@ $(document).ready(function() {
     var rolled = player1Stats.roll();
     player1Stats.turnScore += rolled;
     if (rolled == 1) {
+      alert("You rolled a 1 ! Next Player");
       player1Stats.turnScore = 0;
       $("#stats-turn-score1").text(player1Stats.turnScore);
       $("#play1").hide()
@@ -58,6 +60,9 @@ $(document).ready(function() {
     $("#stats-turn-score1").text(player1Stats.turnScore);
     $("#play1").hide()
     $("#play2").show()
+    if (player1Stats.totalScore >= winningScore) {
+      alert("You Win!");
+    }
 
   });
   //player2 roll
@@ -65,11 +70,11 @@ $(document).ready(function() {
     var rolled = player2Stats.roll();
     player2Stats.turnScore += rolled;
     if (rolled == 1) {
+      alert("You rolled a 1 ! Next Player");
       player2Stats.turnScore = 0;
       $("#stats-turn-score2").text(player2Stats.turnScore);
       $("#play2").hide()
       $("#play1").show()
-
     }
 
     $("#stats-turn-score2").text(player2Stats.turnScore);
@@ -82,6 +87,10 @@ $(document).ready(function() {
     $("#stats-turn-score2").text(player2Stats.turnScore);
     $("#play2").hide()
     $("#play1").show()
+    if (player1Stats.totalScore >= winningScore) {
+      alert("You Win!");
+    }
+
   });
 
 
